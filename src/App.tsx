@@ -12,20 +12,20 @@ import EditPost from './containers/EditPost/EditPost';
 function App() {
   return (
     <>
-      <Header />
+      <Header/>
       <main>
         <Routes>
           <Route path={'/'} element={<Home/>}/>
           <Route path={'/posts'} element={<Home/>}/>
-          <Route path={'/posts/:postId'} element={<PostReview />}/>
-          <Route path={'/posts/:postId/edit'} element={<EditPost />}/>
-          <Route path={'/posts/add'} element={<Add />}/>
+          <Route path={'/posts/:postId'} element={<PostReview/>}/>
+          <Route path={'/posts/:postId/edit'} element={<EditPost/>}/>
+          <Route path={'/posts/add'} element={<Add/>}/>
           <Route path={'/about'} element={<About/>}/>
           <Route path={'/contacts'} element={<Contacts/>}/>
-          <Route path="*" element={<h1>Not found!</h1>} />
+          <Route path="*" element={<h1>Not found!</h1>}/>
         </Routes>
       </main>
-      <Footer />
+      <Footer/>
 
     </>
   );

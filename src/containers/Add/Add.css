@@ -3,13 +3,14 @@
   width: 50%;
 
 }
+
 form {
   backdrop-filter: blur(16px) saturate(180%);
   background-color: #254e58;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
   padding: 38px;
-  filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
+  filter: drop-shadow(0 30px 10px rgba(0, 0, 0, 0.125));
 }
 
 .form-group label {
@@ -44,7 +45,7 @@ form {
 
 
 .btn {
-  -webkit-transition-duration: 0.4s; /* Safari */
+  -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
   padding: 6px 22px;
   border: 1px solid #112D32;

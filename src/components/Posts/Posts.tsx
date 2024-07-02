@@ -5,7 +5,7 @@ import './Posts.css';
 
 
 interface Props {
-  posts: Post[] | undefined
+  posts: Post[] | undefined;
 }
 
 
@@ -15,7 +15,7 @@ const Posts: React.FC<Props> = ({posts}) => {
   if (posts) {
     postElements = posts.map((post) => {
       return (
-          <PostItem key={post.id} post={post} />
+        <PostItem key={post.id} post={post}/>
       );
     });
   }

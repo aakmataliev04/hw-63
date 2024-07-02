@@ -27,7 +27,6 @@ const Home = () => {
     }
 
 
-
   }, []);
 
   useEffect(() => {
@@ -35,7 +34,7 @@ const Home = () => {
   }, [fetchPost]);
   let content = <Posts posts={posts}/>;
   if (isLoading) {
-    content = <div style={{display: 'flex', justifyContent: 'center', padding: '40vh 0'}}><Preloader /></div>;
+    content = <div style={{display: 'flex', justifyContent: 'center', padding: '40vh 0'}}><Preloader/></div>;
   }
 
   return (

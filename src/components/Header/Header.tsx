@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <nav className="nav">
       <div className="container header-container">
-        <NavLink to='/' className="navbar-brand">My blog</NavLink>
+        <NavLink to="/" className="navbar-brand">My blog</NavLink>
         <ul className={'nav-list'}>
           <li className={'nav-item'}>
             <NavLink

@@ -6,8 +6,9 @@ import {useNavigate} from 'react-router-dom';
 import Preloader from '../../components/Preloader/Preloader';
 
 interface Props {
-  post?: Post
+  post?: Post;
 }
+
 const Add: React.FC<Props> = ({post}) => {
   const [postMutation, setPostMutation] = useState<PostApi>({
     title: '',
@@ -17,13 +18,12 @@ const Add: React.FC<Props> = ({post}) => {
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   let id = null;
-  if (post !== undefined){
+  if (post !== undefined) {
     id = post.id;
   }
 
   useEffect(() => {
     if (post) {
-      console.log(post);
       setPostMutation(() => {
         return {
           title: post.title,
@@ -35,13 +35,12 @@ const Add: React.FC<Props> = ({post}) => {
   }, [post]);
 
   const onFieldChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = event.target;
+    const {name, value} = event.target;
     setPostMutation((prevState) => {
-      return { ...prevState, [name]: value };
+      return {...prevState, [name]: value};
     });
 
   };
-
 
 
   const onFormSubmit = async (e: FormEvent) => {
@@ -49,7 +48,7 @@ const Add: React.FC<Props> = ({post}) => {
     setIsLoading(true);
 
     const date = new Date();
-    const time = `${date.toLocaleDateString()} ${date.toLocaleTimeString().slice(0, date.toLocaleTimeString().length-3)}`;
+    const time = `${date.toLocaleDateString()} ${date.toLocaleTimeString().slice(0, date.toLocaleTimeString().length - 3)}`;
     const post = {...postMutation, date: time};
 
     try {
@@ -98,7 +97,7 @@ const Add: React.FC<Props> = ({post}) => {
   );
 
   if (isLoading) {
-    form = <div style={{display: 'flex', justifyContent: 'center', padding: '55px 0'}}><Preloader /></div>;
+    form = <div style={{display: 'flex', justifyContent: 'center', padding: '55px 0'}}><Preloader/></div>;
   }
 
   return (

@@ -18,7 +18,6 @@ const PostReview = () => {
 
     if (post !== null) {
       post = {...post, id: id};
-      console.log(post);
       setPost(post);
     }
     setIsLoading(false);

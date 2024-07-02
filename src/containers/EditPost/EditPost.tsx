@@ -22,16 +22,17 @@ const EditPost = () => {
       setIsLoading(false);
     }
     setPost(loadedPost);
-    }, [id]);
+  }, [id]);
 
-  useEffect( () => {
+  useEffect(() => {
     void fetchPost();
-  },[fetchPost]);
+  }, [fetchPost]);
 
   return (
     <div>
       {post?.id}
-      {isLoading ? <div style={{display: 'flex', justifyContent: 'center', padding: '125px 0'}}><Preloader /></div>: <Add post={post} />}
+      {isLoading ? <div style={{display: 'flex', justifyContent: 'center', padding: '125px 0'}}><Preloader/></div> :
+        <Add post={post}/>}
     </div>
   );
 };

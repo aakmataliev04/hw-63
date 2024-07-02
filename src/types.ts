@@ -1,11 +1,13 @@
 export interface PostApi {
-  title: string
-  body: string
-  date: string
+  title: string;
+  body: string;
+  date: string;
 }
+
 export interface PostsApi {
-  [id: string]: PostApi
+  [id: string]: PostApi;
 }
+
 export interface Post extends PostApi {
-  id: string
+  id: string;
 }
